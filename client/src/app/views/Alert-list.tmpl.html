@@ -1,0 +1,31 @@
+<h1>Alert List</h1>
+<!--<div>-->
+    <!--<ul>-->
+        <!--<li ng-repeat="(key, value) in alertListVm.alerts | groupBy: 'vin'" >-->
+            <!--&lt;!&ndash;Group name: {{ key }}, length: {{ value }}&ndash;&gt;-->
+            <!--Team Type: {{value[0].vin}} &#45;&#45; Count: {{value.length}}-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Count</th>
+        <th>Vin</th>
+        <th>Alert</th>
+        <th>Priority</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--<tr ng-repeat="alert in alertListVm.alerts">-->
+    <tr ng-repeat="(key, value) in alertListVm.alerts | groupBy: 'vin' | toArray | orderBy: 'length'">
+        <td>{{value.length}} </td>
+        <td><a ng-href="#!/readings/{{value[0].vin}}">{{value[0].vin}}</a></td>
+        <td>{{value[0].alert}}</td>
+        <td>{{value[0].priority}}</td>
+    </tr>
+    </tbody>
+</table>
+
+

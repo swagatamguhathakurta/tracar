@@ -1,0 +1,15 @@
+{
+  "name": "ui-seed",
+  "version": "0.0.1",
+  "description": "ui- seed project to understand npm, bower, gulp",
+  "author": "swagatam",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-inject": "^4.2.0",
+    "main-bower-files": "^2.13.1"
+  }
+}

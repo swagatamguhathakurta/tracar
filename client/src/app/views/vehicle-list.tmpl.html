@@ -1,0 +1,26 @@
+<h1>Vehicle List</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Vin</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Red Line Rpm</th>
+        <th>Max Fuel Volume</th>
+        <th>Last Service Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="vehicle in vehicleListVm.vehicles">
+        <td><a ng-href="#!/vehicles/{{vehicle.vin}}">{{vehicle.vin}}</a></td>
+        <td>{{vehicle.make}} </td>
+        <td>{{vehicle.model}}</td>
+        <td>{{vehicle.year}}</td>
+        <td>{{vehicle.readlineRpm}}</td>
+        <td>{{vehicle.maxFuelVolume}}</td>
+        <td>{{vehicle.lastServiceDate}}</td>
+    </tr>
+    </tbody>
+</table>
