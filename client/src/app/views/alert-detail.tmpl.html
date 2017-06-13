@@ -1,0 +1,20 @@
+<h1>Vehicle Details :</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>AID</th>
+        <th>Alert</th>
+        <th>Priority</th>
+        <th>TimeStamp</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="alert in alertDetailVm.alerts">
+        <td>{{alert.aid}}</td>
+        <td>{{alert.alert}} </td>
+        <td>{{alert.priority}}</td>
+        <td>{{alert.timeStamp}}</td>
+    </tr>
+    </tbody>
+</table>

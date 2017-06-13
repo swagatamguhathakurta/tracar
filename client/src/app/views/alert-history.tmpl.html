@@ -1,0 +1,55 @@
+<h1>Filter List</h1>
+<!--<form ng-submit="alertService.his()">-->
+    <!--<div class="form-group">-->
+        <!--<select-->
+                <!--ng-model="alertHistoryVm.title"-->
+                <!--ng-options="al.title for al in alertHistoryVm.alerts">-->
+        <!--</select>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+        <!--<label>Minute</label>-->
+        <!--<input type="text" class="form-control" ng-model ="alertHistoryVm.alerts.min" id="min" placeholder="Enter Minute">-->
+    <!--</div>-->
+    <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+<!--</form>-->
+
+
+<!--<table class="table table-striped">-->
+    <!--<thead>-->
+    <!--<tr>-->
+        <!--<th>Count</th>-->
+        <!--<th>Vin</th>-->
+        <!--<th>Alert</th>-->
+        <!--<th>Priority</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody>-->
+    <!--&lt;!&ndash;<tr ng-repeat="alert in alertListVm.alerts">&ndash;&gt;-->
+    <!--&lt;!&ndash;<tr ng-repeat="(key, value) in alertHistoryVm.alerts | groupBy: 'vin' | toArray | orderBy: 'length'">&ndash;&gt;-->
+        <!--&lt;!&ndash;<td>{{value.length}} </td>&ndash;&gt;-->
+        <!--&lt;!&ndash;<td><a ng-href="#!/readings/{{value[0].vin}}">{{value[0].vin}}</a></td>&ndash;&gt;-->
+        <!--&lt;!&ndash;<td>{{value[0].alert}}</td>&ndash;&gt;-->
+        <!--&lt;!&ndash;<td>{{value[0].priority}}</td>&ndash;&gt;-->
+    <!--</tr>-->
+    <!--</tbody>-->
+<!--</table>-->
+
+<div ng-controller="AlertHistoryController as alertVm">
+    <form novalidate>
+        <select ng-model="alertVm.user.myVar">
+            <option value="">
+            <option value="dogs">Dogs
+            <option value="tuts">Tutorials
+            <option value="cars">Cars
+        </select>
+        <br><br>
+        First Name:<br>
+        <input type="text" ng-model="alertVm.user.firstName"><br>
+
+        <br><br>
+        <button ng-click="alertVm.reset()">RESET</button>
+    </form>
+    <p>form = {{user}}</p>
+    <p>master = {{alertService.master}}</p>
+</div>
+
